@@ -4,7 +4,7 @@
 window.SITE_CONTENT = {
 
   // ---- Header / Logo (also reused in footer copyright) ----
-  textplaceholder1: "Textplaceholder1",       // Logo / brand name
+  textplaceholder1: "AURA Robotics",       // Logo / brand name
 
   // ---- Header nav: "Products" dropdown items ----
   textplaceholder2: "Textplaceholder2",
