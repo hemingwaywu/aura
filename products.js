@@ -34,7 +34,7 @@ window.SOLUTIONS = [
 const productMedia = {
   "C55": {image: 'https://storage.keenon.cn/uploads/20260417/254ccf913f84d4657140cb2dc54bc8c8.png', video: 'https://storage.keenon.cn/uploads/20260722/f4d51e18c414ac75e1a683aa4a5b1215.mp4'},
   "C40": {image: 'https://storage.keenon.cn/uploads/20260916/3d3ca07f713a941858fa98d4be4dc3b5.jpg', video: 'https://storage.keenon.cn/uploads/20260723/e1e461181425c94f46d7fb4e224271e6.mp4'},
-  "C30": {image: 'https://storage.keenon.cn/uploads/20260417/e7c28545293764a307591eb865449083.png'},
+  "C30": {image: 'https://storage.keenon.cn/uploads/20260417/e7c28545293764a307591eb865449083.png', video: 'https://storage.keenon.cn/uploads/20260724/ac329104040ca0786bbb80a9778b58b5.mp4'},
   "C20": {image: 'https://storage.keenon.cn/uploads/20260416/03412bfe39ccca3e66692130a3e21943.png'},
   "T10": {image: 'https://storage.keenon.cn/uploads/20260416/d32a1a3245a76a70d2e972443742c6c9.webp', video: 'https://storage.keenon.cn/uploads/20260723/91f1d2ebaca464c244718628ef95f384.mp4'},
   "T11": {image: 'https://storage.keenon.cn/uploads/20260416/2c9d2fbba747e0b304f3214a46fa2615.png'},
