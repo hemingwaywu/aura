@@ -84,3 +84,10 @@
 .contact-steps article p{color:#c0d4de;line-height:1.7;font-size:14px}
 @media(max-width:800px){.contact-layout{grid-template-columns:1fr;gap:40px}.contact-steps>div{grid-template-columns:1fr}}
 @media(max-width:600px){.google-form-frame{min-height:1050px}.contact-form-shell{padding:24px}}
+
+/* Wide AURA logo with slogan */
+.header{height:150px}
+.brand{width:min(42vw,560px);aspect-ratio:4.45;overflow:hidden;display:block;flex-shrink:0}
+.brand img{display:block;width:100%;height:auto;max-width:none;max-height:none;transform:translateY(-13.5%)}
+@media(max-width:900px){.header{height:auto}.brand{width:min(100%,460px)}}
+@media(max-width:600px){.brand{width:min(100%,390px)}}
