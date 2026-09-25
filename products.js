@@ -29,3 +29,26 @@ window.SOLUTIONS = [
   {id:'senior-living',name:'Senior living',description:'Assist staff with routine delivery and cleaning tasks.',models:'W3 · C20 · X101'},
   {id:'facilities',name:'Facilities',description:'Plan repeatable floor care across offices and shared buildings.',models:'C55 · C40 · C30'}
 ];
+
+// Manufacturer-hosted media. Replace these URLs with locally licensed files when available.
+const productMedia = {
+  "C55": {image: 'https://storage.keenon.cn/uploads/20260417/254ccf913f84d4657140cb2dc54bc8c8.png', video: 'https://storage.keenon.cn/uploads/20260722/f4d51e18c414ac75e1a683aa4a5b1215.mp4'},
+  "C40": {image: 'https://storage.keenon.cn/uploads/20260916/3d3ca07f713a941858fa98d4be4dc3b5.jpg', video: 'https://storage.keenon.cn/uploads/20260723/e1e461181425c94f46d7fb4e224271e6.mp4'},
+  "C30": {image: 'https://storage.keenon.cn/uploads/20260417/e7c28545293764a307591eb865449083.png'},
+  "C20": {image: 'https://storage.keenon.cn/uploads/20260416/03412bfe39ccca3e66692130a3e21943.png'},
+  "T10": {image: 'https://storage.keenon.cn/uploads/20260416/d32a1a3245a76a70d2e972443742c6c9.webp', video: 'https://storage.keenon.cn/uploads/20260723/91f1d2ebaca464c244718628ef95f384.mp4'},
+  "T11": {image: 'https://storage.keenon.cn/uploads/20260416/2c9d2fbba747e0b304f3214a46fa2615.png'},
+  "T8": {image: 'https://storage.keenon.cn/uploads/20260416/65498a39f57bb67ad72cc24f501581f8.webp'},
+  "T9": {image: 'https://storage.keenon.cn/uploads/20260416/05cb7bf106407b7eec89b3deeca1d20c.webp'},
+  "T3": {image: 'https://storage.keenon.cn/uploads/20260416/befc0a839239dc5be50b57d9a8d4d71c.webp'},
+  "W3": {image: 'https://storage.keenon.cn/uploads/20260416/ac63fc9a084bb61bc8577b02e9d9cf66.webp'},
+  "S300": {image: 'https://storage.keenon.cn/uploads/20260417/314843f14fd6ce444371fbb9bdb8d50f.png'},
+  "S100": {image: 'https://storage.keenon.cn/uploads/20260417/2cdda471acd3062d1a3c18d1da95042c.webp'},
+  "XMAN-R1": {image: 'https://storage.keenon.cn/uploads/20260916/28ef21f008c5ef192a81802265895f6f.jpg'},
+  "XMAN-F1": {image: 'https://storage.keenon.cn/uploads/20260916/dc4ddb1f6f438f33df6e2f2cc8a7b32b.jpg'},
+  "XMAN-L1": {image: 'https://storage.keenon.cn/uploads/20260916/1c5bfc52d68ac06b70d83de03096055a.jpg'},
+  "X101": {image: 'https://storage.keenon.cn/uploads/20260916/f05a4815467a0af2bd571defffb64afe.jpg'},
+  "M102": {image: 'https://storage.keenon.cn/uploads/20260916/587a3061c184994c3e4c44bb75341ca7.jpg'},
+  "Keenmow K1": {image: 'https://storage.keenon.cn/uploads/20260417/76a67b9a41c02e3340f633066fb28da9.png'}
+};
+window.PRODUCTS.forEach(product => Object.assign(product, productMedia[product.id] || {}));
