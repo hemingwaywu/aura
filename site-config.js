@@ -1,7 +1,7 @@
 // Edit only this file to replace the distributor's public identity and contact details.
 window.SITE_CONFIG = {
   brand: 'AURA Robotics',
-  logo: 'images/aura-logo.png',
+  logo: 'images/aura-logo-slogan-2026.png',
   email: '', // Add your sales email to enable email inquiries.
   phone: '425-800-7110',
   region: 'United States',
