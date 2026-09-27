@@ -149,3 +149,9 @@
 .home-family-credit{position:absolute;right:28px;bottom:105px;font-size:10px;color:#fff;text-shadow:0 1px 5px #000}
 @media(max-width:850px){.home-family-picture img{object-position:center center}.home-family-copy{top:38px}.home-family-credit{bottom:105px}}
 @media(max-width:600px){.home-family-copy{top:35px}.home-family-copy h1{font-size:35px}.home-family-credit{right:16px;font-size:9px}}
+/* Footer contact details */
+.footer .footer-contact{grid-column:1/-1;border-top:1px solid #ffffff36;padding-top:25px;display:flex;flex-wrap:wrap;gap:18px 64px;color:#d4e1e6}
+.footer .footer-contact>div{display:flex;flex-direction:column;gap:7px}
+.footer .footer-contact span{font-size:12px;font-weight:800;letter-spacing:.1em;color:#aac0ca}
+.footer .footer-contact a{font-size:14px;line-height:1.6;text-decoration:underline;text-underline-offset:3px}
+.footer .footer-contact a:hover{color:#fff}
