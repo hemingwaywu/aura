@@ -39,27 +39,265 @@ function catalog(){let categories=['All',...new Set(products.map(p=>p.category))
 function c40Details(){
   const m='https://storage.keenon.cn/uploads/';
   const media=(path,alt)=>`<img src="${m+path}" alt="${esc(alt)}" loading="lazy" decoding="async">`;
-  const specs=[
-    ['Dimensions without squeegee','578 × 500 × 690 mm','22.76 × 19.69 × 27.17 in'],
-    ['Dimensions with squeegee','616 × 550 × 690 mm','24.25 × 21.65 × 27.17 in'],
-    ['Sweeping width','560 mm with dual side brushes','22.05 in'],
-    ['Vacuuming and scrubbing width','400 mm','15.75 in'],
-    ['Clean / waste water tanks','16 L / 11 L','4.23 / 2.91 US gal'],
-    ['Maximum runtime','Up to 5 h scrubbing; up to 12 h sweeping',''],
-    ['Battery','DC 25.6 V, 50 Ah',''],
-    ['Weight with battery','70 kg','154.3 lb'],
-    ['Minimum passage width','650 mm','25.59 in'],
-    ['Charging time','2 h; quick battery replacement supported',''],
-    ['Cleaning efficiency','Up to 1,100 m²/h','Up to 11,840 ft²/h'],
-    ['Dust bag','8 L','Manufacturer estimates 4–8 days of dust']
-  ];
+  const specGroups=[
+  [
+    "Cleaning performance",
+    [
+      [
+        "Cleaning modes",
+        "Sweeping; vacuuming (sweeping + vacuuming); dust mopping (sweeping + dust mopping); scrubbing (sweeping + scrubbing); water extraction",
+        ""
+      ],
+      [
+        "Rated cleaning efficiency",
+        "Up to 1,100 m²/h",
+        "Up to 11,840 ft²/h"
+      ],
+      [
+        "Rated cleaning area",
+        "Up to 3,000 m² vacuuming; up to 2,500 m² scrubbing",
+        "Up to 32,292 ft² / 26,910 ft²"
+      ],
+      [
+        "Maximum suction power",
+        "23,500 Pa",
+        ""
+      ],
+      [
+        "Sweeping width",
+        "560 mm with dual side brushes",
+        "22.05 in"
+      ],
+      [
+        "Vacuuming / scrubbing width",
+        "400 mm",
+        "15.75 in"
+      ],
+      [
+        "Dust collection",
+        "8 L dust bag; 0.7 L separate dustbin",
+        "2.11 / 0.18 US gal"
+      ],
+      [
+        "Clean / dirty water tanks",
+        "16 L / 11 L",
+        "4.23 / 2.91 US gal"
+      ],
+      [
+        "Maximum runtime by mode",
+        "Sweeping: 15 h; dust mopping: 10 h; vacuuming: 6 h; scrubbing: 5 h",
+        ""
+      ],
+      [
+        "Noise level",
+        "70 dB",
+        ""
+      ],
+      [
+        "Maximum cleaning / moving speed",
+        "0.8 m/s",
+        "2.62 ft/s; datasheet lists 1.2 m/s as a future upgrade target"
+      ],
+      [
+        "Carpet compatibility",
+        "Regular low-pile carpet, pile height ≤ 10 mm",
+        "≤ 0.39 in"
+      ]
+    ]
+  ],
+  [
+    "Mobility and clearance",
+    [
+      [
+        "Minimum passage width / height",
+        "650 mm / 750 mm",
+        "25.59 / 29.53 in"
+      ],
+      [
+        "Gap crossing",
+        "35 mm, navigation only",
+        "1.38 in"
+      ],
+      [
+        "Obstacle climbing",
+        "15 mm during navigation or sweeping + vacuuming; 5 mm during sweeping + scrubbing (not recommended)",
+        "0.59 / 0.20 in"
+      ],
+      [
+        "Maximum slope",
+        "≤ 8° during navigation without cleaning; ≤ 2° during cleaning",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Battery and charging",
+    [
+      [
+        "Battery type",
+        "Lithium iron phosphate (LFP); quick-swappable",
+        ""
+      ],
+      [
+        "Battery capacity",
+        "DC 25.6 V, 50 Ah",
+        ""
+      ],
+      [
+        "Charging time",
+        "Approximately 2 h",
+        ""
+      ],
+      [
+        "Charging methods",
+        "Manual charging with included charger; automatic charging with separately purchased charging pile",
+        ""
+      ],
+      [
+        "Charging input",
+        "100–240 V AC, 50/60 Hz",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Navigation, sensors and hardware",
+    [
+      [
+        "Construction",
+        "ABS and aluminum alloy",
+        ""
+      ],
+      [
+        "Positioning",
+        "Sensor fusion: LiDAR + VSLAM",
+        ""
+      ],
+      [
+        "Positioning accuracy",
+        "Centimeter level",
+        ""
+      ],
+      [
+        "Sensor suite",
+        "LiDAR; stereo vision; collision sensor; IMU; VSLAM; line laser; ultrasonic sensor; RGB camera",
+        ""
+      ],
+      [
+        "Stereo vision coverage",
+        "170° horizontal",
+        ""
+      ],
+      [
+        "LiDAR coverage / range",
+        "240° (marked TBD in datasheet); up to 40 m",
+        "Up to 131.2 ft"
+      ],
+      [
+        "Connectivity",
+        "Wi-Fi; ESP01; 4G",
+        ""
+      ],
+      [
+        "Touchscreen",
+        "11.6 in HD display, 1920 × 1080",
+        ""
+      ],
+      [
+        "Interaction",
+        "Light, touch and voice prompts",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Software and control",
+    [
+      [
+        "Operating systems",
+        "Linux for control; Android for interaction",
+        ""
+      ],
+      [
+        "App languages",
+        "Chinese, English, Japanese, Korean, French, Thai and German",
+        ""
+      ],
+      [
+        "Cleaning controls",
+        "Immediate cleaning; scheduled cleaning; manual cleaning; teaching mode",
+        ""
+      ],
+      [
+        "Smart management",
+        "Mobile app and KEENON Cloud; IoT integration; task resumption; automatic recharging; multi-device coordination",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Operating environment",
+    [
+      [
+        "Suitable spaces",
+        "Indoor environments; hard floors and regular low-pile carpet (≤ 10 mm)",
+        ""
+      ],
+      [
+        "Operating temperature",
+        "0–40 °C",
+        "32–104 °F"
+      ],
+      [
+        "Operating humidity",
+        "20–80% RH",
+        ""
+      ],
+      [
+        "Storage temperature",
+        "−15–45 °C",
+        "5–113 °F"
+      ],
+      [
+        "Storage humidity",
+        "20–80% RH",
+        ""
+      ]
+    ]
+  ],
+  [
+    "Dimensions and weight",
+    [
+      [
+        "Robot dimensions (W × D × H)",
+        "616 × 550 × 690 mm",
+        "24.25 × 21.65 × 27.17 in"
+      ],
+      [
+        "Robot weight",
+        "70 kg, including battery, with empty water tanks; robot only",
+        "154.3 lb"
+      ],
+      [
+        "Charging pile dimensions (W × D × H)",
+        "534 × 225 × 407 mm",
+        "21.02 × 8.86 × 16.02 in"
+      ],
+      [
+        "Charging pile weight",
+        "Approximately 20 kg",
+        "44.1 lb"
+      ]
+    ]
+  ]
+];
   const accessories=['Sweeping brush','Scrubbing brush','Squeegee blade','Side brush','HEPA filter','Sweeping fiber brush','Dust mopping brush','Dust bag'];
   return `<section class="section c40-intro"><span class="eyebrow">KLEENBOT C40 / PRODUCT OVERVIEW</span><h2>Four cleaning modes. One compact robot.</h2><p>The C40 sweeps, vacuums, scrubs and dust pushes. Its triple-brush arrangement separates dry debris from wet cleaning, supporting routine care across mixed floor surfaces.</p><div class="c40-highlights"><div><strong>4 in 1</strong><span>Cleaning functions</span></div><div><strong>400 mm</strong><span>Vacuum and scrub width</span></div><div><strong>1,100 m²/h</strong><span>Maximum rated cleaning efficiency</span></div><div><strong>650 mm</strong><span>Minimum passage width</span></div></div></section>
   <section class="section c40-split"><div>${media('20260723/374f60b7fb3b90e5bd457c575b836cc6.jpg','KLEENBOT C40 product showcase')}</div><div><span class="eyebrow">CLEANING SYSTEM</span><h2>Built for dry and wet messes.</h2><p>Two front rollers collect dry debris before the rear roller scrubs the floor. The separation helps keep the dust compartment dry while the suction system recovers wastewater.</p><ul><li>Handles hair, paper scraps and dust as well as everyday liquid spills.</li><li>Manufacturer states floors can dry in around 30 seconds after scrubbing under suitable conditions.</li><li>Designed for short-pile carpet and common hard floors including tile, vinyl, wood, marble, epoxy, granite and artificial stone. Match the mode to the surface.</li></ul></div></section>
   <section class="section c40-section"><span class="eyebrow">OPERATION AND CONTROL</span><h2>Manage cleaning around your schedule.</h2><div class="c40-feature-grid"><article><h3>Digital management</h3><p>Use the manufacturer’s app or web tools for tasks, status, remote dispatch and cleaning reports.</p></article><article><h3>Navigation and detection</h3><p>VSLAM route planning works with LiDAR, stereo vision, line lasers and ultrasonic sensors to detect obstacles.</p></article><article><h3>Mixed floor workflows</h3><p>Automatic carpet and hard-floor recognition, pause-and-resume scanning and multi-robot scheduling support varied sites.</p></article><article><h3>Building integration</h3><p>The official product page lists IoT-enabled elevator and door passage. Confirm compatibility and installation needs for each building.</p></article></div></section>
   <section class="section c40-split c40-split-reverse"><div>${media('20260924/acbfbdb5def648e39eecbcf3eed27520.jpg','C40 cleaning feature illustration')}</div><div><span class="eyebrow">MAINTENANCE</span><h2>Designed for quick daily care.</h2><p>Modular components, a removable washable dirty-water tank and a replaceable battery simplify routine upkeep. KEENON states a five-second battery swap and about 35 seconds for daily care.</p><p>With compatible equipment, the robot can return to charge and automate fresh-water filling, wastewater drainage and detergent dosing. Ask us which station and site connections are required.</p></div></section>
   <section class="section c40-gallery"><div class="section-heading"><div><span class="eyebrow">PRODUCT IMAGES</span><h2>See the C40 in detail.</h2></div></div><div class="c40-gallery-grid">${media('20260924/fbd22c652d794a2d8de4cf3069d2cb8e.jpg','C40 feature view')}${media('20260804/572f8ab6f027921676f84d06c9e10e3b.png','C40 cleaning system illustration')}${media('20260723/c0e708a8f1f458a625affaca55682fa9.jpg','C40 in an application setting')}</div></section>
-  <section class="section c40-specs"><span class="eyebrow">TECHNICAL DATA</span><h2>Product specifications.</h2><div class="c40-spec-list">${specs.map(([name,metric,imperial])=>`<div><dt>${esc(name)}</dt><dd>${esc(metric)}${imperial?`<small>${esc(imperial)}</small>`:''}</dd></div>`).join('')}</div><p class="c40-note">Figures are manufacturer-published ratings. Actual results depend on conditions, configuration and usage.</p></section>
+  <section class="section c40-specs"><span class="eyebrow">TECHNICAL DATA</span><h2>Product specifications.</h2><p>Detailed specifications from the C40 V1.5 datasheet, July 2026. US measurements are approximate conversions.</p>${specGroups.map(([title,rows])=>`<div class="c40-spec-group"><h3>${esc(title)}</h3><dl class="c40-spec-list">${rows.map(([name,metric,imperial])=>`<div><dt>${esc(name)}</dt><dd>${esc(metric)}${imperial?`<small>${esc(imperial)}</small>`:''}</dd></div>`).join('')}</dl></div>`).join('')}<p class="c40-note">Performance and runtime figures are manufacturer ratings and vary with floor conditions, cleaning mode and configuration. Charging pile is sold separately. Future speed upgrades and values marked TBD are not confirmed current specifications.</p><a class="text-link" href="https://drive.google.com/drive/folders/1ZamB4J7UijyiGdfcYEnPi7WSWapC-99G" target="_blank" rel="noopener noreferrer">View manufacturer datasheet ↗</a></section>
   <section class="section c40-accessories"><span class="eyebrow">CONSUMABLES AND PARTS</span><h2>Available accessories.</h2><ul>${accessories.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><p>Confirm accessory availability and compatibility before ordering.</p></section>
   <section class="section c40-cta"><div><span class="eyebrow">PLAN YOUR DEPLOYMENT</span><h2>Is C40 a fit for your space?</h2><p>Tell us about your floors, square footage, cleaning schedule and water access. We can discuss the robot and any required station or building integration.</p></div>${button('Ask about C40','#/contact?model=C40')}</section>
   <div class="c40-source">Images and product information: <a href="https://www.keenon.com/en/product/C40" target="_blank" rel="noopener">KEENON Robotics C40 official product page ↗</a></div>`;
