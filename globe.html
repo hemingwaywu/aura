@@ -20,5 +20,34 @@ try {
  renderer.domElement.addEventListener('pointermove',e=>{if(dragging){earth.rotation.y+=(e.clientX-x)*.008;x=e.clientX;}});
  renderer.domElement.addEventListener('pointerup',()=>dragging=false);
  renderer.domElement.addEventListener('pointercancel',()=>dragging=false);
-} catch(e){statusEl.textContent='Globe is unavailable in this browser';}
+} catch(e){
+ statusEl.textContent='Loading globe…';
+ const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');document.body.appendChild(canvas);
+ const img=new Image();img.crossOrigin='anonymous';
+ img.onload=()=>{
+  const source=document.createElement('canvas');source.width=img.width;source.height=img.height;
+  const sourceCtx=source.getContext('2d');sourceCtx.drawImage(img,0,0);
+  let pixels;try{pixels=sourceCtx.getImageData(0,0,img.width,img.height).data;}catch(err){statusEl.textContent='Unable to load globe';return;}
+  statusEl.remove();canvas.width=320;canvas.height=320;
+  const output=ctx.createImageData(320,320),samples=[];
+  for(let y=0;y<320;y++)for(let x=0;x<320;x++){
+   const nx=(x-160)/145,ny=(160-y)/145,r2=nx*nx+ny*ny;
+   if(r2>1)continue;
+   const nz=Math.sqrt(1-r2);
+   samples.push([(y*320+x)*4,Math.atan2(nx,nz),Math.asin(ny),.88+.12*nz]);
+  }
+  let previous=0,angle=2.4;
+  function draw(time){requestAnimationFrame(draw);if(time-previous<50||document.hidden)return;angle+=(time-previous>1000?50:time-previous)*.00024;previous=time;
+   output.data.fill(255);
+   for(const [offset,lon,lat,shade] of samples){
+    const u=((lon+angle)/(2*Math.PI)+.5)%1;
+    const sx=Math.floor((u+1)%1*img.width),sy=Math.min(img.height-1,Math.floor((.5-lat/Math.PI)*img.height));
+    const p=(sy*img.width+sx)*4;
+    output.data[offset]=pixels[p]*shade;output.data[offset+1]=pixels[p+1]*shade;output.data[offset+2]=pixels[p+2]*shade;
+   }ctx.putImageData(output,0,0);
+  }requestAnimationFrame(draw);
+ };
+ img.onerror=()=>statusEl.textContent='Unable to load globe';
+ img.src='https://storage.keenon.cn/assets/site/keenon-static/static.keenon.com/assets/images/earth4.jpg';
+}
 </script></body></html>
