@@ -394,11 +394,13 @@ function contact(){
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_next" value="https://aurarobotics.io/#/contact?submitted=1">
     <input type="hidden" name="Website" value="aurarobotics.io">
+    <input type="hidden" name="_url" value="https://aurarobotics.io/#/contact">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
     <input type="hidden" name="Product model mentioned" value="${esc(model||'Not specified')}">
     <div class="form-field"><label for="inquiry-type">What can we help with? <span>*</span></label><select id="inquiry-type" name="Inquiry type" required><option value="" selected disabled>Select an inquiry type</option>${inquiryTypes.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('')}</select></div>
     <fieldset class="form-field form-products"><legend>Products you are interested in</legend><div class="form-checkbox-grid">${productsOfInterest.map((x,i)=>`<label class="form-checkbox" for="product-${i}"><input id="product-${i}" type="checkbox" name="Products of interest" value="${esc(x)}"><span>${esc(x)}</span></label>`).join('')}</div></fieldset>
     <div class="form-field"><label for="inquiry-name">Name <span>*</span></label><input id="inquiry-name" name="Name" type="text" autocomplete="name" placeholder="Your name" required></div>
-    <div class="form-field"><label for="inquiry-email">Email <span>*</span></label><input id="inquiry-email" name="Email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+    <div class="form-field"><label for="inquiry-email">Email <span>*</span></label><input id="inquiry-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
     <div class="form-field"><label for="inquiry-phone">Phone number</label><input id="inquiry-phone" name="Phone number" type="tel" autocomplete="tel" placeholder="+1 (___) ___-____"></div>
     <div class="form-field"><label for="inquiry-industry">Industry category</label><select id="inquiry-industry" name="Industry category"><option value="" selected>Select your industry</option>${industries.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('')}</select></div>
     <div class="form-field"><label for="inquiry-company">Company name</label><input id="inquiry-company" name="Company name" type="text" autocomplete="organization" placeholder="Company or organization"></div>
