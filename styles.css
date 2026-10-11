@@ -157,3 +157,38 @@
 .footer .footer-contact a:hover{color:#fff}
 
 .home-keenon-global h2{text-align:center;font-size:clamp(22px,3vw,38px);margin:24px 0 36px}.keenon-global-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.keenon-globe{display:block;width:100%;aspect-ratio:1;border:0;background:white}.keenon-map-note{font-size:12px;color:var(--muted);line-height:1.5;text-align:center}.keenon-global-stats{display:grid;grid-template-columns:1fr 1fr;margin:0}.keenon-global-stats>div{border-top:1px solid #aeb9bf;padding:28px 12px}.keenon-global-stats dd{margin:0 0 12px;font-size:clamp(32px,4vw,60px);line-height:1;font-weight:600}.keenon-global-stats small{font-size:clamp(14px,1.5vw,22px);font-weight:500}.keenon-global-stats dt{font-size:15px;line-height:1.4}.keenon-global-stats>div:nth-last-child(-n+2){border-bottom:1px solid #aeb9bf}@media(max-width:767px){.keenon-global-layout{grid-template-columns:1fr;gap:24px}.keenon-global-stats>div{padding:22px 10px}.keenon-global-stats dt{font-size:13px}}
+
+
+/* Contact form refinement: open, editorial layout inspired by KEENON */
+.contact-form-shell{
+  background:transparent;
+  border:0;
+  padding:0;
+  min-width:0;
+}
+.contact-form-shell>.eyebrow{display:block;margin-bottom:18px}
+.contact-form-shell h2{max-width:560px;margin:0 0 22px}
+.contact-form-shell .contact-model{margin:0 0 20px;padding:14px 16px;background:#edf4fb;border-left:3px solid var(--blue)}
+.google-form-frame{
+  display:block;
+  width:calc(100% + 2px);
+  min-height:1120px;
+  margin:20px -1px 0;
+  border:0;
+  background:transparent;
+  color-scheme:light;
+}
+.contact-form-alt{
+  margin:14px 0 0;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+  font-size:13px;
+}
+.contact-form-alt a{font-weight:700;text-underline-offset:3px}
+@media(max-width:800px){
+  .contact-form-shell{padding:0}
+  .google-form-frame{min-height:1180px}
+}
+@media(max-width:600px){
+  .google-form-frame{min-height:1250px}
+}
