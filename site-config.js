@@ -2,7 +2,7 @@
 window.SITE_CONFIG = {
   brand: 'AURA Robotics',
   logo: 'images/aura-logo-slogan-2026.png',
-  email: '', // Add your sales email to enable email inquiries.
+  email: 'info@aurarobotics.io',
   phone: '425-800-7110',
   region: 'United States',
   address: '2741 152nd Ave NE, Redmond, WA 98052',
