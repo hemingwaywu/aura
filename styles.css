@@ -202,11 +202,11 @@
 .form-field{display:flex;flex-direction:column;gap:9px;min-width:0;margin:0}
 .form-field>label,.form-field legend{font-size:12px;font-weight:800;letter-spacing:.025em;color:#253d4b}
 .form-field>label span,.form-consent b{color:#4774ca}
-.form-field input,.form-field select,.form-field textarea{width:100%;min-width:0;border:0;border-bottom:1px solid #aabac4;border-radius:0;background:#f1f5f7;padding:15px 13px;color:#102a39;font:inherit;font-size:14px;outline:none;transition:border-color .18s,background .18s;box-sizing:border-box}
-.form-field input,.form-field select{min-height:50px}
+.form-field>input,.form-field>select,.form-field>textarea{width:100%;min-width:0;border:0;border-bottom:1px solid #aabac4;border-radius:0;background:#f1f5f7;padding:15px 13px;color:#102a39;font:inherit;font-size:14px;outline:none;transition:border-color .18s,background .18s;box-sizing:border-box}
+.form-field>input,.form-field>select{min-height:50px}
 .form-field textarea{resize:vertical;min-height:130px;line-height:1.65}
-.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-bottom:2px solid #4774ca;background:#eaf2f8}
-.form-field input::placeholder,.form-field textarea::placeholder{color:#7c8d97;opacity:1}
+.form-field>input:focus,.form-field>select:focus,.form-field>textarea:focus{border-bottom:2px solid #4774ca;background:#eaf2f8}
+.form-field>input::placeholder,.form-field>textarea::placeholder{color:#7c8d97;opacity:1}
 .form-products{grid-column:1/-1;border:0;padding:0}
 .form-products legend{margin-bottom:12px}
 .form-checkbox-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
