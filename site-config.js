@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
   phone: '425-800-7110',
   region: 'United States',
   address: '2741 152nd Ave NE, Redmond, WA 98052',
-  googleFormUrl: '', // Paste the published Google Forms viewform URL to embed it on the contact page.
+  googleFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfoQJVw0DXB_OIzQqILgSSQZhG5psqhfRaOtkoUNF2MUETpvQ/viewform',
   tagline: 'Service robotics for real workplaces',
   manufacturer: 'KEENON Robotics'
 };
