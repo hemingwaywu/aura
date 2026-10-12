@@ -221,3 +221,17 @@
 .contact-success span{font-size:13px}
 @media(max-width:800px){.aura-inquiry-form{grid-template-columns:1fr;gap:18px}.form-products,.form-field:has(textarea),.form-consent,.aura-form-submit,.contact-form-note{grid-column:1}.form-checkbox-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.form-checkbox-grid{grid-template-columns:1fr}.aura-form-submit{width:100%}}
+
+
+/* C40 product-scene gallery and AURA contact section */
+.c40-scene-gallery .section-heading{margin-bottom:22px}
+.c40-scene-gallery .section-heading p{max-width:640px;color:var(--muted);line-height:1.7;margin:10px 0 0}
+.c40-contact{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.8fr);gap:48px;align-items:center;background:var(--pale);padding:clamp(28px,5vw,64px)}
+.c40-contact h2{font-size:clamp(28px,4vw,46px);line-height:1.12;letter-spacing:-.04em;max-width:620px;margin:12px 0 18px}
+.c40-contact-copy>p,.c40-contact-action>p{color:var(--muted);line-height:1.7;max-width:650px}
+.c40-contact-links{display:flex;flex-wrap:wrap;gap:22px 42px;margin-top:28px}
+.c40-contact-links>div{display:flex;flex-direction:column;gap:8px;min-width:130px}
+.c40-contact-links>div>span:first-child{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--muted)}
+.c40-contact-links a,.c40-contact-links>div>span:last-child{font-size:14px;font-weight:700;color:var(--ink);text-underline-offset:3px}
+.c40-contact-action{border-left:1px solid var(--line);padding-left:32px}
+@media(max-width:700px){.c40-contact{grid-template-columns:1fr;gap:24px}.c40-contact-action{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.c40-contact-links{gap:18px 28px}}
